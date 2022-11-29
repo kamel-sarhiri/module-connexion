@@ -5,13 +5,11 @@
 session_start();
 
 if(isset($_POST['submit'])){
+
     
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $login = mysqli_real_escape_string($conn, $_POST['login']);
     $pass = md5($_POST['password']);
-    $cpass = md5($_POST['cpassword']);
-    $user_type = $_POST['user_type'];
+   
 
     $select = "SELECT * FROM utilisateurs2 WHERE login = '$login' && password = '$pass'";
 
@@ -37,6 +35,8 @@ if(isset($_POST['submit'])){
     }
     
 }
+var_dump($result);
+
 
 ?>
 
@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
                 }
             }
             ?>
-            <input type="text" name="login" required placeholder="Choissisez votre login">
+            <input type="text" name="login" required placeholder="Entrez votre login">
             <input type="password" name="password" required placeholder="Entrez votre mot de passe">
             <input type="submit" name="submit" value="connectez vous maintenant" class="form-btn">
             <p>Vous souhaitez créer un compte ? <a href="register_form.php">Inscrivez-vous maintenant</a></p>
