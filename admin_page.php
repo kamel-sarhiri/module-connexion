@@ -1,3 +1,14 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+    header('Location: login_form.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
  <head>
@@ -10,8 +21,8 @@
     <div class="container">
     <!-- zone de connexion -->
         <div class=content>
-            <h3>Hello, <span>admin</span></h3>
-            <h1>welcome <span></span></h1>
+            <h3>Bonjour, <span>admin</span></h3>
+            <h1>Bienvenue <span><?php echo $_SESSION['admin_name']?></span></h1>
             <p>Vous êtes sur la page admin</p>
             <a href="login_form.php" class="btn">Connexion</a>
             <a href="register_form.php" class="btn">Création de compte</a>

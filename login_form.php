@@ -4,28 +4,28 @@
 
 session_start();
 
-if(isset($_POST['submit'])){
-
+if(isset($_POST['login']) && isset($_POST['password'])){
     
     $login = mysqli_real_escape_string($conn, $_POST['login']);
     $pass = md5($_POST['password']);
-   
+    
 
-    $select = "SELECT * FROM utilisateurs2 WHERE login = '$login' && password = '$pass'";
+    $select = "SELECT * FROM utilisateurs2 WHERE login = '".$login."' && password = '".$pass."'";
 
     $result = mysqli_query($conn, $select);
 
     if(mysqli_num_rows($result) > 0){
-        $row = mysqli_fetch_array($result);
+
+        $row = mysqli_fetch_assoc($result);
 
         if($row['usertype'] == 'admin'){
 
-            $_SESSION['admin_name'] = $row['name'];
+            $_SESSION['admin_name'] = $row['login'];
             header('Location: admin_page.php');
 
         }elseif ($row['usertype'] == 'user') {
             
-            $_SESSION['user_name'] = $row['name'];
+            $_SESSION['user_name'] = $row['login'];
             header('Location: user_page.php');
 
         }
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
     }
     
 }
-var_dump($result);
+
 
 
 ?>
@@ -52,7 +52,7 @@ var_dump($result);
     <div class="form-container">
         <form action="" method="post">
             <h3>Connectez vous maintenant</h3>
-             <?php
+            <?php
             if(isset($error)){
                 foreach($error as $error){
                     echo '<span class = "error-msg">'.$error.'</span>';
