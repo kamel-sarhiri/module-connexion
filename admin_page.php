@@ -134,13 +134,13 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
         <ul class="reseaux">
           <li>
             <a
-              href="https://www.facebook.com/fcbarcelona"
+              href="https://www.facebook.com/ksarhi"
               title="Suivez sur Facebook"
               target="_blank"
             >
               <img
                 loading="lazy"
-                src="footer-picto-facebook.svg"
+                src="footer-picto-facebook.jpg"
                 alt="Suivez sur Facebook"
                 title="Suivez sur Facebook"
                 height="auto"
@@ -150,12 +150,12 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
           </li>
           <li>
             <a
-              href="https://www.instagram.com/fcbarcelona/"
+              href="https://www.instagram.com/kamelsarhi/"
               title="Suivez sur Instagram"
               target="_blank"
             >
               <img
-                src="footer-picto-instagram.svg"
+                src="footer-picto-instagram.jpg"
                 alt="Suivez sur Instagram"
                 title="Suivez sur Instagram"
                 height="auto"
@@ -171,7 +171,7 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
             >
               <img
                 loading="lazy"
-                src="footer-picto-twitter.svg"
+                src="footer-picto-twitter.jpg"
                 alt="Suivez sur Twitter"
                 title="Suivez sur Twitter"
                 height="auto"

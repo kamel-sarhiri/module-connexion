@@ -103,7 +103,7 @@ if(!isset($_SESSION['user_name'])){
         <ul class="reseaux">
           <li>
             <a
-              href="https://www.facebook.com/fcbarcelona"
+              href="https://www.facebook.com/ksarhi"
               title="Suivez sur Facebook"
               target="_blank"
             >
@@ -119,7 +119,7 @@ if(!isset($_SESSION['user_name'])){
           </li>
           <li>
             <a
-              href="https://www.instagram.com/fcbarcelona/"
+              href="https://www.instagram.com/kamelsarhi/"
               title="Suivez sur Instagram"
               target="_blank"
             >
