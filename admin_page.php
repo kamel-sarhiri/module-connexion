@@ -27,6 +27,63 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
     </style>
  </head>
  <body>
+    
+    <header>
+        <div class="container">
+            <div id="left">
+                <h3>Kamel SARHIRI</h3>
+                <h4>Web Developper</h4>
+            </div>
+            
+            <div id="right">
+                <?php
+                    // test si l'utilisateur est connecté
+                
+                    if (isset($_GET['deconnexion'])){
+                        if($_GET['deconnexion']==true){
+                            session_unset();
+                            header('Location: Index.php');
+                        }
+                    }
+                    else if(isset($_SESSION['admin_name'])){
+                        $user = $_SESSION['admin_name'];
+
+                        echo "<div id='center'>
+                                <h3>Bonjour $user</h3>
+                            </div>";
+                        
+                        if ($user != 'admin') {
+                            $_SESSION['admin'] = "false";
+                            echo "<nav>
+                                <ul>
+                                    <li><a class='a_head'href='update_profile.php'>Modification profil</a></li>
+                                    <li><a class='a_head' href='logout.php'>Déconnexion</a></li>
+                                </ul>
+                            </nav>";
+                        }
+                        else {
+                            $_SESSION['admin'] = "true";
+                            echo "<nav>
+                                <ul>
+                                    <li><a class='btn'href='update_profileadmin.php'>Modification profil</a></li>
+                                    <li><a class='btn' href='logout.php'>Déconnexion</a></li>
+                                </ul>
+                            </nav>";
+                        }
+                    }
+                ?>
+            </div>
+            
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
     <div class="container">
     <!-- zone de connexion -->
         <div class=content>
@@ -65,5 +122,65 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
             <a href="logout.php" class="btn">Déconnexion</a>
         </div>
     </div>
- </body>
+<footer class="footer_2" style="padding-top: 10px; padding-bottom: 10px">
+      <div>
+        <p>
+          © Module connexion. Tous droits réservés. | Mentions légales | Cookies |
+          Référent  : SARHIRI Kamel
+        </p>
+      </div>
+
+      <div>
+        <ul class="reseaux">
+          <li>
+            <a
+              href="https://www.facebook.com/fcbarcelona"
+              title="Suivez sur Facebook"
+              target="_blank"
+            >
+              <img
+                loading="lazy"
+                src="footer-picto-facebook.svg"
+                alt="Suivez sur Facebook"
+                title="Suivez sur Facebook"
+                height="auto"
+                width="auto"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/fcbarcelona/"
+              title="Suivez sur Instagram"
+              target="_blank"
+            >
+              <img
+                src="footer-picto-instagram.svg"
+                alt="Suivez sur Instagram"
+                title="Suivez sur Instagram"
+                height="auto"
+                width="auto"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/fcbarcelona_fra"
+              title="Suivez sur Twitter"
+              target="_blank"
+            >
+              <img
+                loading="lazy"
+                src="footer-picto-twitter.svg"
+                alt="Suivez sur Twitter"
+                title="Suivez sur Twitter"
+                height="auto"
+                width="auto"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+</footer>   
+</body>
 </html>

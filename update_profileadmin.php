@@ -54,6 +54,61 @@ if(isset($_POST['submit'])) {
     <title>Modification profil</title>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div id="left">
+                <h3>Kamel SARHIRI</h3>
+                <h4>Web Developper</h4>
+            </div>
+            
+            <div id="right">
+                <?php
+                    // test si l'utilisateur est connecté
+                
+                    if (isset($_GET['deconnexion'])){
+                        if($_GET['deconnexion']==true){
+                            session_unset();
+                            header('Location: Index.php');
+                        }
+                    }
+                    else if(isset($_SESSION['admin_name'])){
+                        $user = $_SESSION['admin_name'];
+
+                        echo "<div id='center'>
+                                <h3>Bonjour $user</h3>
+                            </div>";
+                        
+                        if ($user != 'admin') {
+                            $_SESSION['admin'] = "false";
+                            echo "<nav>
+                                <ul>
+                                    <li><a class='a_head'href='update_profile.php'>Modification profil</a></li>
+                                    <li><a class='a_head' href='logout.php'>Déconnexion</a></li>
+                                </ul>
+                            </nav>";
+                        }
+                        else {
+                            $_SESSION['admin'] = "true";
+                            echo "<nav>
+                                <ul>
+                                    <li><a class='btn'href='update_profileadmin.php'>Modification profil</a></li>
+                                    <li><a class='btn' href='logout.php'>Déconnexion</a></li>
+                                </ul>
+                            </nav>";
+                        }
+                    }
+                ?>
+            </div>
+            
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <div class="form-container">
         <form action="" method="post" enctype="multipart/form-data">
             <h3>Modification de profil</h3>
