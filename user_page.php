@@ -26,8 +26,7 @@ if(!isset($_SESSION['user_name'])){
             <h3>Bonjour, <span>Utilisateur</span></h3>
             <h1>Bienvenue <span><?php echo $_SESSION['user_name']?></span></h1>
             <p>Vous êtes sur la page utilisateur</p>
-            <a href="login_form.php" class="btn">Connexion</a>
-            <a href="register_form.php" class="btn">Création de compte</a>
+            <a href="update_profile.php" class="btn">Modification de compte</a>
             <a href="logout.php" class="btn">Déconnexion</a>
             
 
