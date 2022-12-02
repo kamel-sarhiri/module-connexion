@@ -40,7 +40,6 @@ if(isset($_POST['submit'])) {
 
 } //Fin du test isset
 
-var_dump($row); //affiche le contenu de la variable $row
 
 ?>
 

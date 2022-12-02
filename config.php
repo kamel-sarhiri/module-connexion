@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","moduleconnexion");
+$conn = new mysqli("localhost","root","","moduleconnexion");
 
 ?>
