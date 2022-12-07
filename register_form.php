@@ -85,6 +85,12 @@ if(isset($_POST['submit'])){
 
 
     </div>
+    <div class="container">
+        <div class=content>
+            <a href="index.html" class="btn">Retour</a>
+        </div>
+            
+    </div>
 
     <footer class="footer_2" style="padding-top: 10px; padding-bottom: 10px">
         <div>

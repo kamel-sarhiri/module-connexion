@@ -8,6 +8,7 @@
 4- Contact Area CSS
 5- Footer Area CSS
 6- Scroll-Top Area CSS
+7- About Area CSS
 
 */
 
@@ -418,3 +419,197 @@ footer .content p span {
 }
 
 /*--------------------- 6- Scroll-Top (End) ---------------------*/
+
+/*--------------------- 7- About Area CSS (Start) ---------------------*/
+.about .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.image {
+  width: 32rem;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  border: 1rem solid var(--purple);
+}
+
+.about .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 55rem;
+  flex: 1 1 55rem;
+}
+
+.about .content h2 {
+  font-size: 3rem;
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
+.about .content > p {
+  font-size: 1.6rem;
+  color: var(--grey);
+  line-height: 1.6;
+  padding-bottom: 1rem;
+}
+
+.about .content .about-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about .content .about-info .info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 15rem;
+  flex: 1 1 15rem;
+}
+
+.about .content .about-info .info h4 {
+  font-size: 1.6rem;
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
+.about .content .about-info .info span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.about .content .about-info .info .btn {
+  margin-top: 1rem;
+}
+
+.counting {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 35rem;
+  flex: 1 1 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.counting .box {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 18rem;
+  flex: 1 1 18rem;
+  text-align: center;
+  background-color: #222;
+  padding: 2rem;
+}
+
+.counting .box .count {
+  font-size: 3.5rem;
+  color: var(--purple);
+  padding-bottom: 0.5rem;
+}
+
+.counting .box h3 {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.skill-container {
+  padding: 2rem 0;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 30rem;
+  flex: 1 1 30rem;
+  margin-right: 1.5rem;
+}
+
+.skill-item .box {
+  padding: 1rem 0;
+}
+
+.skill-item .box h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  font-size: 1.7rem;
+  color: var(--white);
+  font-weight: 400;
+}
+
+.skill-item .box .progress-bar {
+  width: 100%;
+  background: #222;
+  overflow: hidden;
+  height: 1rem;
+  border-radius: 50rem;
+}
+
+.skill-item .box .progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--purple);
+}
+
+.skill-item.item1 .box:nth-child(1) .progress-bar span {
+  width: 95%;
+}
+
+.skill-item.item1 .box:nth-child(2) .progress-bar span {
+  width: 90%;
+}
+
+.skill-item.item1 .box:nth-child(3) .progress-bar span {
+  width: 85%;
+}
+
+.skill-item.item2 .box:nth-child(1) .progress-bar span {
+  width: 75%;
+}
+
+.skill-item.item2 .box:nth-child(2) .progress-bar span {
+  width: 65%;
+}
+
+.skill-item.item2 .box:nth-child(3) .progress-bar span {
+  width: 60%;
+}
+
+/*--------------------- 7- About Area CSS (End) ---------------------*/

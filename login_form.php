@@ -1,5 +1,4 @@
 
-3
 <?php
 
 @include 'config.php';
@@ -65,6 +64,12 @@ if(isset($_POST['login']) && isset($_POST['password'])){
             <input type="submit" name="submit" value="connectez vous maintenant" class="form-btn">
             <p>Vous souhaitez créer un compte ? <a href="register_form.php">Inscrivez-vous maintenant</a></p>
         </form>
+    </div>
+    <div class="container">
+        <div class=content>
+            <a href="index.html" class="btn">Retour</a>
+        </div>
+            
     </div>
 <footer class="footer_2" style="padding-top: 10px; padding-bottom: 10px">
     <div>
