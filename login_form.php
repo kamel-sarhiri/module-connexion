@@ -1,3 +1,5 @@
+
+3
 <?php
 
 @include 'config.php';
@@ -64,5 +66,65 @@ if(isset($_POST['login']) && isset($_POST['password'])){
             <p>Vous souhaitez créer un compte ? <a href="register_form.php">Inscrivez-vous maintenant</a></p>
         </form>
     </div>
- </body>
+<footer class="footer_2" style="padding-top: 10px; padding-bottom: 10px">
+    <div>
+    <p>
+        © Module connexion. Tous droits réservés. | Mentions légales | Cookies |
+        Référent  : SARHIRI Kamel
+    </p>
+    </div>
+
+    <div>
+        <ul class="reseaux">
+            <li>
+            <a
+                href="https://www.facebook.com/ksarhi"
+                title="Suivez sur Facebook"
+                target="_blank"
+            >
+                <img
+                loading="lazy"
+                src="footer-picto-facebook.jpg"
+                alt="Suivez sur Facebook"
+                title="Suivez sur Facebook"
+                height="auto"
+                width="auto"
+                />
+            </a>
+            </li>
+            <li>
+            <a
+                href="https://www.instagram.com/kamelsarhi/"
+                title="Suivez sur Instagram"
+                target="_blank"
+            >
+                <img
+                src="footer-picto-instagram.jpg"
+                alt="Suivez sur Instagram"
+                title="Suivez sur Instagram"
+                height="auto"
+                width="auto"
+                />
+            </a>
+            </li>
+            <li>
+            <a
+                href="https://twitter.com/fcbarcelona_fra"
+                title="Suivez sur Twitter"
+                target="_blank"
+            >
+                <img
+                loading="lazy"
+                src="footer-picto-twitter.jpg"
+                alt="Suivez sur Twitter"
+                title="Suivez sur Twitter"
+                height="auto"
+                width="auto"
+                />
+            </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
 </html>

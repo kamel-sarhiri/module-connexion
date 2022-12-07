@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
         }else{
             $insert = "INSERT INTO utilisateurs2 (login, prenom, nom, password, usertype) VALUES ('$login', '$lastname', '$name', '$pass', '$user_type')";
             $result = mysqli_query($conn, $insert);
-            header('Location: Index.php');
+            header('Location: login_form.php');
             
         }
 
@@ -45,6 +45,17 @@ if(isset($_POST['submit'])){
     <title>Formulaire d'inscription</title>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div id="left">
+                <h3>Kamel SARHIRI</h3>
+                <h4>Web Developper</h4>
+            </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="form-container">
         <form action="" method="post">
             <h3>Inscrivez vous maintenant</h3>
@@ -74,5 +85,66 @@ if(isset($_POST['submit'])){
 
 
     </div>
+
+    <footer class="footer_2" style="padding-top: 10px; padding-bottom: 10px">
+        <div>
+            <p>
+                © Module connexion. Tous droits réservés. | Mentions légales | Cookies |
+                Référent  : SARHIRI Kamel
+            </p>
+        </div>
+
+        <div>
+            <ul class="reseaux">
+                <li>
+                    <a
+                        href="https://www.facebook.com/ksarhi"
+                        title="Suivez sur Facebook"
+                        target="_blank"
+                    >
+                        <img
+                        loading="lazy"
+                        src="footer-picto-facebook.jpg"
+                        alt="Suivez sur Facebook"
+                        title="Suivez sur Facebook"
+                        height="auto"
+                        width="auto"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.instagram.com/kamelsarhi/"
+                        title="Suivez sur Instagram"
+                        target="_blank"
+                    >
+                        <img
+                        src="footer-picto-instagram.jpg"
+                        alt="Suivez sur Instagram"
+                        title="Suivez sur Instagram"
+                        height="auto"
+                        width="auto"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://twitter.com/fcbarcelona_fra"
+                        title="Suivez sur Twitter"
+                        target="_blank"
+                    >
+                        <img
+                        loading="lazy"
+                        src="footer-picto-twitter.jpg"
+                        alt="Suivez sur Twitter"
+                        title="Suivez sur Twitter"
+                        height="auto"
+                        width="auto"
+                        />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

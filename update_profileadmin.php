@@ -21,19 +21,19 @@ if(isset($_POST['submit'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $login = mysqli_real_escape_string($conn, $_POST['login']);
-    //$pass = md5($_POST['password']);
+    $pass = md5($_POST['cpassword']);
 
     
 
     //Requête de modification d'enregistrement
-    $sql = "UPDATE utilisateurs2 SET nom = '$name', prenom = '$lastname', login = '$login' WHERE login = '$login'";
+   $sql = "UPDATE utilisateurs2 SET nom = '$name', prenom = '$lastname', login = '$login', password = '$pass' WHERE login = '$login'";
 
     //Exécution de la requête
     $resultat = mysqli_query($conn, $sql);
 
     //Contôle sur la requête
     if($resultat) {
-    echo "<h1>Requête validée !<h1><p>la mise à jour a été éffectuée !<p>";
+    echo "<br><br><br><br><br><br><h1>Requête validée !<h1><p>la mise à jour a été éffectuée !<p>";
     } else {
     die('Erreur SQL !'.$sql.'<br />'.mysqli_error($conn));
     }
@@ -125,18 +125,81 @@ if(isset($_POST['submit'])) {
             <input type="text" name="lastname" value="" placeholder="Entrez votre nouveau prénom">
             <span>Ancien login : </span><?php echo "$row[login]"?>
             <input type="text" name="login" value="" placeholder="Entrer votre nouveau login">
+             <span>Ancien mot de passe : </span><?php echo "$row[password]"?>
+            <input type="password" name="cpassword" value="" placeholder="Entrer votre nouveau mot de passe">
             <input type="submit" name="submit" value="Modifier" class="form-btn">
         </form>
         
     </div>
     <div class="container">
     <!-- zone de connexion -->
-              <div class=content>
+            <div class=content>
                 <a href="admin_page.php" class="btn">Retour</a>
             </div>
             <div class=content>
                 <a href="logout.php" class="btn">Déconnexion</a>
             </div>
         </div>
+
+        <footer class="footer_2" style="padding-top: 10px; padding-bottom: 10px">
+        <div>
+            <p>
+                © Module connexion. Tous droits réservés. | Mentions légales | Cookies |
+                Référent  : SARHIRI Kamel
+            </p>
+        </div>
+
+        <div>
+            <ul class="reseaux">
+                <li>
+                    <a
+                        href="https://www.facebook.com/ksarhi"
+                        title="Suivez sur Facebook"
+                        target="_blank"
+                    >
+                        <img
+                        loading="lazy"
+                        src="footer-picto-facebook.jpg"
+                        alt="Suivez sur Facebook"
+                        title="Suivez sur Facebook"
+                        height="auto"
+                        width="auto"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.instagram.com/kamelsarhi/"
+                        title="Suivez sur Instagram"
+                        target="_blank"
+                    >
+                        <img
+                        src="footer-picto-instagram.jpg"
+                        alt="Suivez sur Instagram"
+                        title="Suivez sur Instagram"
+                        height="auto"
+                        width="auto"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://twitter.com/fcbarcelona_fra"
+                        title="Suivez sur Twitter"
+                        target="_blank"
+                    >
+                        <img
+                        loading="lazy"
+                        src="footer-picto-twitter.jpg"
+                        alt="Suivez sur Twitter"
+                        title="Suivez sur Twitter"
+                        height="auto"
+                        width="auto"
+                        />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

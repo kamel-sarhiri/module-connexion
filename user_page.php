@@ -78,7 +78,9 @@ if(!isset($_SESSION['user_name'])){
     <div class="container">
     <!-- zone de connexion -->
         <div class=content>
-            <h3>Bonjour, <span>Utilisateur</span></h3>
+            <h3>Bonjour,</h3>
+            <br>
+            <br>
             <h1>Bienvenue <span><?php echo $_SESSION['user_name']?></span></h1>
             <p>Vous êtes sur la page utilisateur</p>
             <a href="update_profile.php" class="btn">Modification de compte</a>
@@ -109,7 +111,7 @@ if(!isset($_SESSION['user_name'])){
             >
               <img
                 loading="lazy"
-                src="footer-picto-facebook.svg"
+                src="footer-picto-facebook.jpg"
                 alt="Suivez sur Facebook"
                 title="Suivez sur Facebook"
                 height="auto"
@@ -124,7 +126,7 @@ if(!isset($_SESSION['user_name'])){
               target="_blank"
             >
               <img
-                src="footer-picto-instagram.svg"
+                src="footer-picto-instagram.jpg"
                 alt="Suivez sur Instagram"
                 title="Suivez sur Instagram"
                 height="auto"
@@ -140,7 +142,7 @@ if(!isset($_SESSION['user_name'])){
             >
               <img
                 loading="lazy"
-                src="footer-picto-twitter.svg"
+                src="footer-picto-twitter.jpg"
                 alt="Suivez sur Twitter"
                 title="Suivez sur Twitter"
                 height="auto"
