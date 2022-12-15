@@ -48,6 +48,7 @@ if(!isset($_SESSION['user_name'])){
                             $_SESSION['admin'] = "false";
                             echo "<nav>
                                 <ul>
+                                    <li><a class='a_head'href='index.html'>Accueil</a></li>
                                     <li><a class='a_head'href='update_profile.php'>Modification profil</a></li>
                                     <li><a class='a_head' href='logout.php'>Déconnexion</a></li>
                                 </ul>
@@ -57,8 +58,9 @@ if(!isset($_SESSION['user_name'])){
                             $_SESSION['admin'] = "true";
                             echo "<nav>
                                 <ul>
-                                    <li><a class='btn'href='update_profile.php'>Modification profil</a></li>
-                                    <li><a class='btn' href='logout.php'>Déconnexion</a></li>
+                                    <li><a class='a_head'href='index.html'>Accueil</a></li>
+                                    <li><a class='a_head'href='update_profile.php'>Modification profil</a></li>
+                                    <li><a class='a_head' href='logout.php'>Déconnexion</a></li>
                                 </ul>
                             </nav>";
                         }

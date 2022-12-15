@@ -56,6 +56,7 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
                             $_SESSION['admin'] = "false";
                             echo "<nav>
                                 <ul>
+                                    <li><a class='a_head'href='index.html'>Accueil</a></li>
                                     <li><a class='a_head'href='update_profile.php'>Modification profil</a></li>
                                     <li><a class='a_head' href='logout.php'>Déconnexion</a></li>
                                 </ul>
@@ -65,8 +66,9 @@ $request = $conn->query("SELECT * FROM utilisateurs2");
                             $_SESSION['admin'] = "true";
                             echo "<nav>
                                 <ul>
-                                    <li><a class='btn'href='update_profileadmin.php'>Modification profil</a></li>
-                                    <li><a class='btn' href='logout.php'>Déconnexion</a></li>
+                                    <li><a class='a_head'href='index.html'>Accueil</a></li>
+                                    <li><a class='a_head'href='update_profileadmin.php'>Modification profil</a></li>
+                                    <li><a class='a_head' href='logout.php'>Déconnexion</a></li>
                                 </ul>
                             </nav>";
                         }
