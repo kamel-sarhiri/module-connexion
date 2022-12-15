@@ -51,6 +51,13 @@ if(isset($_POST['submit'])){
                 <h3>Kamel SARHIRI</h3>
                 <h4>Web Developper</h4>
             </div>
+            <div id="right">
+                <nav>
+                    <ul>
+                        <li><a class='a_head'href='index.html'>Accueil</a></li>
+                    </ul>
+                </nav>
+            </div>
     </header>
     <br>
     <br>
