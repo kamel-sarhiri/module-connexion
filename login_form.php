@@ -49,6 +49,27 @@ if(isset($_POST['login']) && isset($_POST['password'])){
     <title>Formulaire de connexion</title>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div id="left">
+                <h3>Kamel SARHIRI</h3>
+                <h4>Web Developper</h4>
+            </div>
+            
+            <div id="right">
+                <nav>
+                    <ul>
+                        <li><a class='a_head'href='index.html'>Accueil</a></li>
+                        <li><a class='a_head'href='register_form.php'>Inscription</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="form-container">
         <form action="" method="post">
             <h3>Connectez vous maintenant</h3>
